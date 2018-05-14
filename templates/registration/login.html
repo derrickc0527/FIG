@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="modal-dialog text-center">
+        <div class="col-sm-9 main-section">
+            <div class="modal-content">
+                <div class="col-12 user-img">
+                    <img src="{% static "face.png" %}">
+                </div>
+
+                <div class="col-12 form-input">
+                    <form action="{% url 'login' %}" method="POST">
+                        {% if next %}
+                            <p style="color: #d2292a;">Sorry! No Access. Please login</p>
+                        {% endif %}
+                        <div class="form-group">
+                            {% csrf_token %}
+                            <span class="form-control">
+                              <input type="text" name="username" autofocus maxlength="254" required id="id_username" placeholder="Enter Username"/></span>
+                        </div>
+                        <div class="form-group">
+                            {% csrf_token %}
+                            <span class="form-control"><input type="password" name="password" required id="id_password" placeholder="Enter Password"/></span>
+                        </div>
+                        <button type="submit" class="btn btn-success" value="login">Login</button>
+                        {% if form.errors %}
+                            <p style="color: #d2292a;">Error!</p>
+                        {% endif %}
+                    </form>
+                </div>
+                <div class="col-12 forgot">
+                    <p style="color: #404040;">Forget Password? Please contact admin.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

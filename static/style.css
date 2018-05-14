@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+	font-family: 'Roboto', sans-serif;
+  background: url(cesar-couto-420981-unsplash.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+.main-section{
+  margin: 0 auto;
+  margin-top: 130px;
+  padding: 0;
+}
+.modal-content{
+  background-color: #434e5a;
+  opacity: .7;
+  padding: 0 18px;
+  border-radius: 10px;
+}
+.user-img img{
+  height: 120px;
+  width: 120px;
+}
+.user-img {
+  margin-top: -60px;
+  margin-bottom: 45px;
+}
+.form-group{
+  margin-bottom: 25px;
+}
+.form-group input{
+  height: 42px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.form-group::before{
+	font-family: 'Font Awesome\ 5 Free';
+	content: "\f1fa";
+	position: absolute;
+	font-size: 22px;
+}
+.form-input button{
+  width: 40%;
+  margin: 5px 0 25px;
+}
+.btn-success{
+  background-color: blue;
+  font-size: 19px;
+  border-radius: 5px;
+  padding: 7px 14px;
+  border: 1px solid #daf1ff;
+}
+.btn-success hover{
+  background-color: #13445e;
+  border: 1px solid #daf1ff;
+}
+.forgot{
+  padding: 5px 0 25px;
+}
+.forgot p{
+  color: #daf1ff;
+}
+
+table tr,td,th{
+  border: 1px solid black;
+}
+.butt{
+  padding: 5px 375px 25px;
+}
+
+.navbar-right , .navbar-brand{
+ color: #f4f4f4;
+ cursor: pointer;
+}
+.navbar-right{
+ margin-right: 1em !important;
+}
+.nav-link:hover{
+ background: #f4f4f4;
+ color: #f97300;
+}
+.navbar-collapse{
+ justify-content: flex-end;
+}
+.navbar-toggler{
+  background:#fff !important;
+}
+.navbar-collapse{
+ justify-content: flex-end;
+}

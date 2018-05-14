@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container" style="margin-top:20px; ">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h1>Add/Update</h1>
+
+                <form method="POST">
+                    {% csrf_token %}
+                    <input type='hidden' name='csrfmiddlewaretoken'
+                           value='yQijWCnHC9I6GfQOPvePX32RrABGBlc1mjcNzmQzNaLDfh6pY0g2m6m0YcE1yjD4'/>
+                    <p>Merchant:</p>
+                    <input type="text" name="merchant" maxlength="26" required id="id_merchant"/>
+                    <p>Funder:</p>
+                    <input type="text" name="funder" maxlength="100" required id="id_funder"/>
+                    <p>Transaction Date:</p>
+                    <input type="date" name="tranDate" required="" id="id_tranDate">
+                    <p>Fund Amount:</p>
+                    <input type="text" name="fundAmt" maxlength="100" required id="id_fundAmt"/>
+                    <p>Broker:</p>
+                    <input type="text" name="broker" maxlength="100" required id="id_broker"/>
+                    <p>Lead:</p>
+                    <input type="text" name="lead" maxlength="100" required id="id_lead"/>
+                    <p>Deal Status: </p>
+                    <select name="dealStatus" id="id_dealStatus">
+                        <option value="CONTRACT OUT" selected>contract out</option>
+
+                        <option value="SIGNED CONTRACT">signed contract</option>
+
+                        <option value="FUNDED">funded</option>
+
+                    </select>
+                    <p>Note:</p>
+                    <input type="text" name="note" maxlength="100" required id="id_note"/>
+                    <button type='submit'>Save</button>
+                </form>
+
+                {% if product %}
+                    <a href="{% url 'delete_product' product.id %}">Delete</a>
+                {% endif %}
+                <!-- <a href="{% url 'create_product' %}">New Product</a> -->
+
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+
+{% endblock %}
