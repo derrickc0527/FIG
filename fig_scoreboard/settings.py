@@ -76,10 +76,21 @@ WSGI_APPLICATION = 'fig_scoreboard.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd5g30hlfhu98vq',
+        'USER': 'srhyvirelgllqg',
+        'PASSWORD': '6119cae382fc05e47b1602ae5031763f8cbbb208938c6c182442562ba48981cd',
+        'HOST': 'ec2-23-23-180-121.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 

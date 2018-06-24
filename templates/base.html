@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="refresh" content="30" />
         <title>Scoreboard</title>
         {% load static %}
         <link href="{% static "bootstrap.min.css" %}" rel="stylesheet">
@@ -22,10 +23,10 @@
             <a class="navbar-brand" href="/">FIG Capital</a>
             <a class="navbar-right" href="{% url 'logout' %}">Logout</a>
         </nav>
-        
+
         {% block content %}
-        
+
         {% endblock %}
-        
+
         </body>
 </html>
