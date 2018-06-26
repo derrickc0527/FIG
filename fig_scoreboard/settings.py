@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'products',
     'accounts',
-    'import_export',
 ]
 
 MIDDLEWARE = [
