@@ -10,11 +10,13 @@ class Products(models.Model):
     lead = models.CharField(max_length=100, null=True)
     note = models.CharField(max_length=100, null=True)
 
+    REQUESTED_CONTRACT = "CONTRACT REQUESTED"
     CONTRACT_OUT = 'CONTRACT OUT'
     SIGNED_CONTRACT = 'SIGNED CONTRACT'
     FUNDED = 'FUNDED'
 
     DEAL_STATUS = (
+        (REQUESTED_CONTRACT, 'contract requested'),
         (CONTRACT_OUT, 'contract out'),
         (SIGNED_CONTRACT, 'signed contract'),
         (FUNDED, 'funded'),
