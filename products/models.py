@@ -10,7 +10,7 @@ class Products(models.Model):
     lead = models.CharField(max_length=100, null=True)
     note = models.CharField(max_length=100, null=True)
 
-    REQUESTED_CONTRACT = "CONTRACT REQUESTED"
+    REQUESTED_CONTRACT = 'CONTRACT REQUESTED'
     CONTRACT_OUT = 'CONTRACT OUT'
     SIGNED_CONTRACT = 'SIGNED CONTRACT'
     FUNDED = 'FUNDED'
@@ -22,7 +22,7 @@ class Products(models.Model):
         (FUNDED, 'funded'),
     )
 
-    dealStatus = models.CharField(max_length=15, choices=DEAL_STATUS, default=CONTRACT_OUT)
+    dealStatus = models.CharField(max_length=15, choices=DEAL_STATUS, default=REQUESTED_CONTRACT)
 
     def __str__(self):
         return self.merchant
