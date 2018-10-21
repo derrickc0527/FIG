@@ -22,7 +22,7 @@ class Products(models.Model):
         (FUNDED, 'funded'),
     )
 
-    dealStatus = models.CharField(max_length=15, choices=DEAL_STATUS, default=REQUESTED_CONTRACT)
+    dealStatus = models.CharField(max_length=20, choices=DEAL_STATUS, default=REQUESTED_CONTRACT)
 
     def __str__(self):
         return self.merchant
